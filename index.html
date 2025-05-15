@@ -19,7 +19,6 @@
       header {
         padding: 1rem;
         font-size: 1rem;
-        background-color: black;
       }
 
       .top-info {
@@ -62,6 +61,20 @@
         display: block;
       }
 
+      .products-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+
+      .product-img {
+        width: 100%;
+        max-width: 220px;
+        border-radius: 10px;
+      }
+
       .button-container {
         margin-bottom: 3rem;
       }
@@ -75,12 +88,19 @@
         text-decoration: none;
         border-radius: 8px;
       }
+
+      a:hover {
+        opacity: 0.8;
+      }
     </style>
   </head>
   <body>
     <header>
       <div class="top-info">SEASON 3 OUT NOW</div>
-      <div class="top-info">Envíos a todo el país y 10% abonando con transferencia <a href="https://dropind.empretienda.com.ar/" style="color:white; text-decoration: underline;">aquí</a>.</div>
+      <div class="top-info">
+        Envíos a todo el país y 10% abonando con transferencia
+        <a href="https://dropind.empretienda.com.ar/" style="color:white; text-decoration: underline;">aquí</a>.
+      </div>
     </header>
 
     <div class="nav-bar">
@@ -93,6 +113,13 @@
         Descubrí lo nuevo de Drop y visitá nuestro local en Salta Capital
       </div>
       <img src="IMG-20250515-WA0065.jpg" alt="Inauguración" class="inauguracion-img" />
+
+      <!-- Galería de productos -->
+      <div class="products-gallery">
+        <img src="prod1.jpg" alt="Producto 1" class="product-img" />
+        <img src="prod2.jpg" alt="Producto 2" class="product-img" />
+        <img src="prod3.jpg" alt="Producto 3" class="product-img" />
+      </div>
     </div>
 
     <div class="button-container">
