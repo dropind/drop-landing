@@ -26,20 +26,13 @@
         margin-bottom: 0.5rem;
       }
 
-      .nav-bar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-        flex-wrap: wrap;
+      .logo-container {
+        text-align: center;
+        margin-top: 1rem;
       }
 
       .logo {
-        height: 50px;
-      }
-
-      .season-banner {
-        height: 50px;
+        height: 80px;
       }
 
       .main-content {
@@ -54,11 +47,22 @@
         margin-right: auto;
       }
 
-      .inauguracion-img {
-        width: 100%;
+      .carousel {
+        position: relative;
         max-width: 700px;
         margin: 2rem auto;
-        display: block;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-images img {
+        width: 100%;
+        flex-shrink: 0;
       }
 
       .products-gallery {
@@ -73,6 +77,12 @@
         width: 100%;
         max-width: 220px;
         border-radius: 10px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .product-img:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
       }
 
       .button-container {
@@ -103,16 +113,22 @@
       </div>
     </header>
 
-    <div class="nav-bar">
-      <img src="drop-logo.png" alt="Logo Drop" class="logo" />
-      <img src="IMG-20250515-WA0069.jpg" alt="Season 3" class="season-banner" />
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Drop" class="logo" />
+    </div>
+
+    <!-- Carrusel -->
+    <div class="carousel">
+      <div class="carousel-images" id="carousel-images">
+        <img src="IMG-20250515-WA0065.jpg" alt="Inauguración" />
+        <img src="IMG-20250515-WA0069.jpg" alt="Season 3" />
+      </div>
     </div>
 
     <div class="main-content">
       <div class="main-text">
         Descubrí lo nuevo de Drop y visitá nuestro local en Salta Capital
       </div>
-      <img src="IMG-20250515-WA0065.jpg" alt="Inauguración" class="inauguracion-img" />
 
       <!-- Galería de productos -->
       <div class="products-gallery">
@@ -125,5 +141,16 @@
     <div class="button-container">
       <a href="https://dropind.empretienda.com.ar/" class="ver-productos">Ver productos</a>
     </div>
+
+    <!-- Script carrusel -->
+    <script>
+      const carousel = document.getElementById('carousel-images');
+      let index = 0;
+
+      setInterval(() => {
+        index = (index + 1) % 2;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }, 3000);
+    </script>
   </body>
 </html>
