@@ -40,13 +40,13 @@
       }
 
       .main-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       .carousel {
         position: relative;
@@ -103,6 +103,28 @@
       a:hover {
         opacity: 0.8;
       }
+
+      .social-icons {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+      }
+
+      .social-icons img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+      }
+
+      .social-icons img:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
     </style>
   </head>
   <body>
@@ -142,6 +164,16 @@
 
     <div class="button-container">
       <a href="https://dropind.empretienda.com.ar/" class="ver-productos">Ver productos</a>
+    </div>
+
+    <!-- Íconos sociales -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/drop.ind" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      </a>
+      <a href="https://wa.me/543875223946" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+      </a>
     </div>
 
     <!-- Script carrusel -->
